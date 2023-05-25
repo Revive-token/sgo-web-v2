@@ -1,0 +1,65 @@
+.btn
+    @extend .flex, .items-center, .justify-center
+    padding: 16px 28px
+    min-width: 124px
+    color: #ffffff
+    border: 1px solid transparent
+    border-radius: 1000px
+    font-weight: var(--font-bold)
+    line-height: 100%
+    text-transform: uppercase
+    &__icon,
+    &__text
+        position: relative
+        z-index: 2
+
+    &__icon
+        width: 24px
+        height: 24px
+        @extend .flex, .items-center, .justify-center
+        &--after
+            margin-left: 16px
+        
+
+    &--primary
+        overflow: hidden
+        position: relative
+        background-color: var(--color-primary)
+
+
+
+    &--outline
+        border: 1px solid #31A62B
+
+    &--link
+        gap: 0px
+        padding: 0px
+        color: var(--color-blue-darken)
+        min-width: unset
+
+
+button.btn-arrow
+    background-color: transparent
+    cursor: pointer
+    opacity: 0.2
+    &:hover
+        opacity: 1
+
+
+.link
+    @extend .flex, .items-center, .justify-center
+    color: var(--color-blue)
+    &__icon,
+    &__text
+        position: relative
+        z-index: 2
+
+    &__text
+        font-weight: var(--font-bold)
+
+    &__icon
+        width: 24px
+        height: 24px
+        @extend .flex, .items-center, .justify-center
+        &--after
+            margin-left: 8px

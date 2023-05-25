@@ -1,0 +1,16 @@
+header.navbar
+    .navbar__container
+        button.navbar__toggle-menu(onclick="openMenu()")
+            i.icon.icon--menu: include ../components/menu.pug
+            i.icon.icon--close: include ../components/close.pug
+        a(href="index.html").navbar__logo.brand-logo: img(src="assets/images/logo.png", alt="Imeshh logo")
+        .navbar__wrapper
+            nav.navbar__menu 
+                a(href="#") Ai Tech
+                a(href="#") Roadmap
+                a(href="#") SPP
+                a(href="#") Whitepaper
+
+            .navbar__cta
+                a.btn.btn--outline.navbar__button(href="https://safuugo.gitbook.io/safuugo/what-is-safuugo/sgo-launch")
+                    span.btn__text FIND OUT MORE

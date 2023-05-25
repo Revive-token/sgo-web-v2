@@ -1,0 +1,36 @@
+.section-page--countdown
+    @extend .flex, .items-center, .justify-center, .flex-col
+    gap: 48px
+    position: relative
+    padding-bottom: 160px
+    .countdown-heading
+        color: var(--color-white)
+        font-weight: 600
+        font-size: 28px
+    
+    .countdown
+        @extend .flex, .items-center, .justify-center
+        gap: 16px
+        &__box
+            @extend .flex, .items-center, .justify-center, .flex-col
+            gap: 4px
+            width: 224px
+            aspect-ratio: 1/1
+            background: #0E1310
+            border: 1px solid rgba(255, 255, 255, 0.12)
+            border-radius: 16px
+        &__label
+            text-transform: uppercase
+            font-weight: 400
+        &__time
+            font-family: var(--heading)
+            font-weight: 600
+            font-size: 124px
+            line-height: 116.7%
+            color: var(--color-white)
+
+    .main-info
+        @extend .flex, .items-center, .justify-center, .flex-col
+        gap: 24px
+        max-width: 630px
+        text-align: center

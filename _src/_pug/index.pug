@@ -1,0 +1,19 @@
+doctype html
+html(lang="en-GB")
+	head
+		include ../_parts/global/head.pug
+		title SafuuGO Fair Launch
+	body
+		include ../_parts/global/navbar.pug
+		main.main-page
+			.bg-one
+				include ../_parts/pages/home/countdown.pug
+				include ../_parts/pages/home/highlight.pug
+			include ../_parts/pages/home/tech.pug
+			include ../_parts/pages/home/investment.pug
+			include ../_parts/pages/home/roadmap.pug
+			include ../_parts/pages/home/pricing.pug
+		include ../_parts/global/footer.pug
+			
+		script(src="assets/js/global.js")
+		//- script(src="assets/js/index.js")

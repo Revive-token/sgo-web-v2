@@ -1,0 +1,140 @@
+.navbar
+	padding: 24px 80px
+	position: relative
+	position: fixed
+	width: 100%
+	left: 0
+	top: 0
+	z-index: 1000
+	transition: all 0.3s
+
+	&__container
+		@extend .flex
+		width: 100%
+		max-width: 1900px
+		margin: 0 auto
+	&__logo
+		margin-right: 32px
+		display: block
+		img
+			max-width: unset
+			height: 48px
+
+	&__wrapper
+		@extend .flex-grow, .flex, .items-center, .justify-between
+
+	&__menu
+		@extend .flex, .items-center, .justify-center, .flex-grow
+		text-transform: uppercase
+		gap: 32px
+		a
+			font-weight: var(--font-medium)
+			color: var(--color-base)
+			letter-spacing: 0.1rem
+			font-size: var(--font-size-small)
+
+	&__cta
+		@extend .flex, .items-center
+		gap: 20px
+	&__button
+		font-size: 14px
+
+	&--fixed
+		background-color: rgba(0, 0, 0, 0.2)
+		padding: 8px 80px
+		backdrop-filter: blur(20px)
+		&::after
+			opacity: 0
+		
+	&__toggle-menu
+		display: none
+		background-color: transparent
+		border: none
+		outline: none
+		width: 72px
+		height: 72px
+		@extend .flex, .items-center, .justify-center
+
+
+	@include responsive-m()
+		padding: 0px
+		min-height: 72px
+		&::after
+			bottom: -1px
+
+		&__toggle-menu
+			display: block
+			position: absolute
+			left: 0px
+			top: 0
+			z-index: 1001
+			.icon
+				&--close
+					display: none
+
+			&--open
+				.icon
+					&--menu
+						display: none
+					&--close
+						display: block
+
+
+		&__container
+			display: flex
+			align-items: center
+			justify-content: center
+
+		&__logo
+			margin-right: 0px
+			width: 100%
+			background-color:  var(--color-background)
+			position: relative
+			z-index: 1000
+			padding: 18px 20px
+			height: 72px
+			flex-grow: 1
+			display: block
+			max-width: unset
+			text-align: center
+			img
+				width: 108px
+				height: auto
+				margin: 0 auto
+
+		&__wrapper
+			position: fixed
+			width: 100%
+			height: 100vh
+			left: 0
+			top: 0
+			bottom: 0
+			right: 0
+			background-color: var(--color-background)
+			flex-direction: column
+			z-index: 999
+			justify-content: start
+			gap:30px
+			padding: 100px 32px 32px 32px
+			transition: all 0.3s
+			transform: translateY(-100%)
+
+			&--show
+				transform: translateY(0%)
+
+		&__menu
+			flex-direction: column
+			flex-grow: 0
+			width: 100%
+			gap: 0px
+			a
+				width: 100%
+				display: block
+				text-align: center
+				padding: 16px 32px
+
+		&__cta
+			flex-direction: column
+			width: 100%
+			.btn
+				width: 100%

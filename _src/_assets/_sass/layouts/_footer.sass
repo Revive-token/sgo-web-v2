@@ -1,0 +1,54 @@
+.footer
+    background-color: #000000
+    &__container
+        @extend .flex, .items-center, .justify-between
+        padding: 40px 0px
+        position: relative
+
+    &__left,
+    &__right
+        @extend .flex, .flex-col
+        gap: 32px
+        
+    &__copy
+        color: #686868
+
+    &__logo
+        img
+            height: 48px    
+    &__title
+        font-weight: 600
+        font-size: 24px
+        line-height: 116.7%
+        color: var(--color-white)
+
+    &__social-media
+        @extend .flex, .items-center, .flex-grow
+        text-transform: uppercase
+        gap: 24px
+        a
+            width: 48px
+            height: 48px
+            @extend .flex, .items-center, .justify-center
+            border-radius: 8px
+            background-color: var(--color-primary)
+    &__copy
+        display: block
+
+
+    @include responsive-m()
+        &__container
+            flex-direction: column
+            padding: 100px 20px 20px 20px
+        &__menu
+            flex-direction: column
+            text-align: left
+            margin-top: 17px
+            align-items: flex-start
+            gap: 0
+            a
+                padding: 4px 0px
+
+        &__copy
+            text-align: center
+            padding-top: 96px

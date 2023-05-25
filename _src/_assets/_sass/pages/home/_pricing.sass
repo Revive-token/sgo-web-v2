@@ -1,0 +1,81 @@
+.section-page--pricing
+    padding: 120px 0px
+    background-color: #0E1411
+    .header-section--pricing
+        padding-bottom: 64px
+
+
+    .box-pricing
+        @extend .flex, .items-start, .justify-center
+        gap: 20px
+        .pricing
+            @extend .flex, .items-center, .justify-center, .flex-col
+            width: 100%
+            flex-grow: 1
+            padding: 40px
+            background: #1C2722
+            border-radius: 20px
+            border-width: 2px
+            border-style: solid
+            border-color:  rgba(255, 255, 255, 0.0696)
+            
+            &--popular
+                position: relative
+                border-color: var(--color-primary)
+
+            &__label
+                position: absolute
+                width: 132px
+                height: 30px
+                left: 654px
+                top: 4677px
+                background: #31A62B
+                border-radius: 64px
+                top: -15px
+                left: calc( 50% - 66px )
+                font-weight: 600
+                font-size: 12px
+                line-height: 116.7%
+                display: flex
+                align-items: center
+                justify-content: center
+
+            &__name
+                font-weight: 400
+                font-family: var(--heading)
+                font-size: 20px
+                line-height: 116.7%
+                color: var(--color-white)
+                padding-bottom: 24px
+                
+            &__number
+                font-weight: 400
+                font-family: var(--heading)
+                font-size: 48px
+                line-height: 100%
+                letter-spacing: -2px
+                color: var(--color-white)
+            &__time
+                line-height: 160%
+                display: block
+            
+            &__benefit
+                margin-top: 40px
+                padding: 24px 0px 40px 0px
+                border-top: 1px solid #3E4542
+                width: 100%
+                list-style: none
+                min-height: 322px
+
+            &__cta
+                width: 100%
+
+
+    .benefit
+        flex-grow: 1
+        width: 100%
+        margin-bottom: 16px
+        @extend .flex
+        gap: 12px
+        line-height: 160%
+        color: var(--color-white)

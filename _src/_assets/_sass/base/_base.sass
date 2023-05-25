@@ -1,0 +1,118 @@
+*
+    padding: 0
+    border: 0
+    margin: 0
+    outline: none
+    box-sizing: border-box
+    
+body
+    background-color: var(--color-background)
+    font-family: var(--font)
+    font-size: var(--font-size-body)
+    color: var(--color-base)
+    line-height: 150%
+    padding-top: 132px
+    background-image: url('../images/countdown/bg-countdown-left.png')
+    background-repeat: no-repeat
+    background-position: top left
+    // background-attachment: fixed
+    @include responsive-4k
+        transform: scale(1.6)
+        transform-origin: top
+        overflow-x: hidden
+        .navbar
+            padding-left: 16px
+            padding-right: 16px
+        .navbar__container
+            max-width: 1200px
+        .main-page
+            max-width: unset
+
+.bg-one
+    background-image: url('../images/countdown/bg-countdown-right.png')
+    background-repeat: no-repeat
+    background-position: center right
+.main-page
+    max-width: 1900px
+    margin: 0 auto
+    z-index: 1
+    position: relative
+    &--faq
+        background: url(../images/faq/bg-blur-faq.png)no-repeat center top
+        background-size: 100%
+        min-height: 100vh
+
+    @include responsive-m()
+        &--faq
+            background: unset
+
+.text-center
+    text-align: center
+    
+img
+    max-width: 100%
+
+.container
+    width: 100%
+    max-width: 1200px
+    margin: 0 auto
+
+a, button
+    font-family: var(--font)
+    font-size: var(--font-size-body)
+    text-decoration: none
+    transition: all 0.3s ease
+
+.header-section
+    @extend .flex, .items-center, .justify-center, .flex-col
+    width: 100%
+    max-width: 920px
+    margin: 0 auto
+    gap: 24px
+    text-align: center
+    &__title
+        display: block
+        font-size: 40px
+        font-family: var(--heading)
+        font-weight: 600
+        color: var(--color-white)
+    &__desc
+        line-height: 160%
+        font-size: 16px
+        strong
+            display: block
+            font-weight: 600
+            padding-bottom: 16px
+            color: var(--color-white)
+    &__cta
+        display: block
+
+    @include responsive-m()
+        width: 100%
+        gap: 20px
+        &__title,
+        &__desc
+            width: 100%
+            text-align: left !important
+
+.section-information
+    @extend .grid-2
+    gap: 40px
+    &__content
+        width: 100%
+    &__cover
+        width: 100%
+
+    @include responsive-m()
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important
+        padding: 0px 20px
+    
+
+.card-section
+    max-width: 1412px
+    width: 100%
+    margin: 0 auto
+    border-radius: 20px
+    background: rgba(21, 27, 22, 0.72)
+    backdrop-filter: blur(60px)
+    padding: 80px 0px

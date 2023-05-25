@@ -1,0 +1,58 @@
+.section-page--investment
+    padding-bottom: 0px
+
+    .header-section--investment
+        align-items: flex-start
+        text-align: left
+        gap: 32px
+
+    .investment
+        @extend .flex, .items-center, .justify-between
+        &__meta,
+        &__count
+            flex: 0 0 50%
+            max-width: 50%
+            width: 50%
+        &__count
+            display: flex
+            justify-content: end
+    .box-investment
+        max-width: 463px
+        width: 100%
+        padding: 48px
+        background: linear-gradient(174.41deg, rgba(255, 255, 255, 0.096) -61.65%, rgba(255, 255, 255, 0.0312) 138.79%)
+        border-radius: 24px
+        border: 1px solid rgba(255, 255, 255, 0.1)
+        position: relative
+        overflow: hidden
+        &::before
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            right: 0
+            top: 0
+            background: url('../images/bg-card-investment.png')no-repeat top right
+            opacity: 0.075
+        &__icon
+            width: 80px
+            height: 80px
+            background: #31A62B
+            box-shadow: 0px 16px 56px -16px #31A62B
+            border-radius: 16px
+            margin-bottom: 77px
+            z-index: 1
+            position: relative
+            @extend .flex, .items-center, .justify-center
+            svg
+                fill: #ffffff
+                width: 48px
+                height: 48px
+        &__number
+            font-weight: 600
+            font-size: 64px
+            line-height: 116.7%
+            color: var(--color-white)
+            padding-bottom: 24px
+            z-index: 1
+            position: relative

@@ -1,0 +1,24 @@
+.section-page--highlight
+    padding-bottom: 0px
+    position: relative
+    .card-section--highlight
+        border: 1px solid rgba(255, 255, 255, 0.1)
+    
+    .highlight-boxes
+        @extend .flex, .items-center, .justify-center
+        gap: 96px
+
+    .highlight
+        @extend .flex, .items-center, .justify-center, .flex-col
+        text-align: center
+        gap: 6px
+        &__icon
+            padding-bottom: 60px
+            
+        &__label
+            font-size: 20px
+            font-family: var(--heading)
+            color: var(--color-white)
+
+        &__desc
+            font-size: 14px
